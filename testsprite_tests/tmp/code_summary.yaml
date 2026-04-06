@@ -1,0 +1,210 @@
+version: "2"
+type: frontend
+tech_stack:
+  - TypeScript
+  - Next.js 16
+  - React 19
+  - Supabase Auth
+  - Supabase PostgreSQL
+  - FastAPI (Python backend at http://localhost:8000)
+  - Groq LLaMA 3.3 70B
+  - Twilio WhatsApp API
+  - pdfjs-dist
+  - deep-translator
+
+routes:
+  - path: /
+    file: frontend/app/page.tsx
+    auth_required: false
+    description: Root redirect — sends authenticated users to /home, unauthenticated to /login
+  - path: /login
+    file: frontend/app/login/page.tsx
+    auth_required: false
+    description: Email + password sign in
+  - path: /signup
+    file: frontend/app/signup/page.tsx
+    auth_required: false
+    description: Account creation with name, age, email, password, diagnosis, doctor info
+  - path: /home
+    file: frontend/app/home/page.tsx
+    auth_required: true
+    description: Dashboard / home screen with feature shortcuts and today's reminders
+  - path: /discharge
+    file: frontend/app/discharge/page.tsx
+    auth_required: true
+    description: Upload or paste discharge summary text, get plain-language AI explanation
+  - path: /symptom
+    file: frontend/app/symptom/page.tsx
+    auth_required: true
+    description: Describe a symptom and get SAFE/MONITOR/URGENT classification
+  - path: /prescriptions
+    file: frontend/app/prescriptions/page.tsx
+    auth_required: true
+    description: Upload prescription PDF or paste text to extract and save medications
+  - path: /drugs
+    file: frontend/app/drugs/page.tsx
+    auth_required: true
+    description: Search any drug for patient-friendly usage, dosage, and side effects
+  - path: /reminders
+    file: frontend/app/reminders/page.tsx
+    auth_required: true
+    description: Add and manage daily medication reminders and appointment reminders
+  - path: /profile
+    file: frontend/app/profile/page.tsx
+    auth_required: true
+    description: View account details and doctor on record, sign out
+
+features:
+  - name: User Signup
+    description: New patient creates an account with personal and medical details
+    files:
+      - frontend/app/signup/page.tsx
+      - frontend/lib/auth.ts
+    entry_route: /signup
+    user_interactions:
+      - Fill in First Name field
+      - Fill in Age field
+      - Fill in Email field
+      - Fill in Password field
+      - Fill in Condition/Diagnosis field
+      - Fill in Doctor's Name field
+      - Fill in Doctor's WhatsApp Number field
+      - Click "Create Account" button
+      - See success message and redirect to /home
+      - See error message if email already exists or password too short
+    api_calls: []
+    auth_required: false
+
+  - name: User Login
+    description: Returning patient signs in with email and password
+    files:
+      - frontend/app/login/page.tsx
+      - frontend/lib/auth.ts
+    entry_route: /login
+    user_interactions:
+      - Fill in Email field
+      - Fill in Password field
+      - Click "Sign In" button
+      - See error on invalid credentials
+      - Redirect to /home on success
+    api_calls: []
+    auth_required: false
+
+  - name: Discharge Explainer
+    description: Patient uploads or pastes discharge summary text and gets a plain-language AI explanation
+    files:
+      - frontend/app/discharge/page.tsx
+      - frontend/lib/api.ts
+    entry_route: /discharge
+    user_interactions:
+      - Upload a PDF or paste discharge text into the text area
+      - Select language (English / Hindi / Tamil)
+      - Click "Analyse" button
+      - See loading state
+      - View summary sections: What Happened, Home Care, Warning Signs, Follow Up
+    api_calls:
+      - method: POST
+        endpoint: http://localhost:8000/analyse
+    auth_required: true
+
+  - name: Symptom Checker
+    description: Patient describes a symptom and gets an AI classification with recommended action
+    files:
+      - frontend/app/symptom/page.tsx
+      - frontend/lib/api.ts
+    entry_route: /symptom
+    user_interactions:
+      - Type symptom description in text area
+      - Click "Check Symptom" button
+      - See SAFE / MONITOR / URGENT classification with explanation
+      - Click "Alert Doctor" to send WhatsApp notification (if URGENT)
+    api_calls:
+      - method: POST
+        endpoint: http://localhost:8000/symptom
+      - method: POST
+        endpoint: http://localhost:8000/notify
+    auth_required: true
+
+  - name: Prescription Tracker
+    description: Patient uploads prescription PDF or pastes text; AI extracts medications and saves them
+    files:
+      - frontend/app/prescriptions/page.tsx
+      - frontend/lib/api.ts
+    entry_route: /prescriptions
+    user_interactions:
+      - Upload a PDF or paste prescription text
+      - Click "Extract & Save" button
+      - View list of extracted medications with drug name, dosage, frequency, duration
+      - Click delete icon to remove a prescription
+    api_calls:
+      - method: POST
+        endpoint: http://localhost:8000/prescriptions/extract-and-save
+      - method: GET
+        endpoint: http://localhost:8000/prescriptions (via Supabase client)
+      - method: DELETE
+        endpoint: http://localhost:8000/prescriptions/{id} (via Supabase client)
+    auth_required: true
+
+  - name: Drug Lookup
+    description: Patient searches any drug name to get patient-friendly information
+    files:
+      - frontend/app/drugs/page.tsx
+      - frontend/lib/api.ts
+    entry_route: /drugs
+    user_interactions:
+      - Type drug name in search input
+      - Click "Look Up" or press Enter
+      - View: generic name, what it's for, how to take it, side effects, what to avoid
+    api_calls:
+      - method: POST
+        endpoint: http://localhost:8000/drug
+    auth_required: true
+
+  - name: Reminders
+    description: Patient adds and manages daily medication reminders and appointment reminders
+    files:
+      - frontend/app/reminders/page.tsx
+      - frontend/lib/api.ts
+    entry_route: /reminders
+    user_interactions:
+      - Switch between Medicine and Appointment tabs
+      - Fill in medicine name, dose, time and click "Add Medicine"
+      - Fill in doctor name, date, time, location and click "Add Appointment"
+      - Toggle reminder as done by clicking the circle checkbox
+      - Click trash icon to delete a reminder
+      - Confirm deletion in modal dialog
+    api_calls:
+      - method: GET
+        endpoint: Supabase reminders table
+      - method: POST
+        endpoint: Supabase reminders table (insert)
+      - method: PATCH
+        endpoint: Supabase reminders table (toggle is_done)
+      - method: DELETE
+        endpoint: Supabase reminders table
+    auth_required: true
+
+  - name: Profile
+    description: Patient views their account information and doctor details, can sign out
+    files:
+      - frontend/app/profile/page.tsx
+      - frontend/lib/auth.ts
+    entry_route: /profile
+    user_interactions:
+      - View name, age, condition displayed
+      - View doctor name and WhatsApp number
+      - Click "Sign Out" button
+      - Redirected to /login after sign out
+    api_calls: []
+    auth_required: true
+
+known_limitations:
+  - issue: Symptom log DB write is unreachable (return statement before insert in symptom.py)
+    location: backend/app/routes/symptom.py
+    impact: Symptom results are not persisted to symptom_logs table
+  - issue: extractAndSavePrescriptions uses regex JSON fallback which can fail on unusual LLM output
+    location: frontend/lib/api.ts
+    impact: Prescription extraction may silently fail if LLM returns unexpected format
+  - issue: Scanned PDF support is not available; only digital PDFs work with pdfjs-dist
+    location: frontend/app/discharge/page.tsx
+    impact: Scanned hospital documents cannot be processed

@@ -1,0 +1,1092 @@
+[
+  {
+    "id": "TC001",
+    "title": "Create a new patient account and land on home",
+    "description": "Verifies a new patient can sign up with required details and is redirected to the home dashboard with a visible success confirmation.",
+    "category": "User Signup",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signup"
+      },
+      {
+        "type": "action",
+        "description": "Fill Test into the first name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill 35 into the age field"
+      },
+      {
+        "type": "action",
+        "description": "Fill patient+signup1@example.com into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill ValidPassword123! into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Fill Hypertension into the condition/diagnosis field"
+      },
+      {
+        "type": "action",
+        "description": "Fill Dr Rao into the doctor name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill +14155550123 into the doctor WhatsApp number field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign up form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the user lands on the home dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an account creation success confirmation is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Sign in and reach the home dashboard",
+    "description": "Verifies a returning patient can log in with valid credentials and is routed to the home dashboard.",
+    "category": "User Login",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the user lands on the home dashboard"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "View profile details and sign out",
+    "description": "Patient can view profile details and successfully sign out to return to the login screen.",
+    "category": "Profile",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation option to open profile"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the account details section"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the doctor details section"
+      },
+      {
+        "type": "action",
+        "description": "Sign out of the account"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the user lands on the login page"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Enforce protected route access after sign out",
+    "description": "After signing out, patient cannot access the profile page and is redirected to login.",
+    "category": "Profile",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation option to open profile"
+      },
+      {
+        "type": "action",
+        "description": "Sign out of the account"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /profile"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the user lands on the login page"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Add a medicine reminder and see it in today's list",
+    "description": "Patient can create a medicine reminder and it appears in the reminders list for today.",
+    "category": "Reminders",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation option to open reminders"
+      },
+      {
+        "type": "action",
+        "description": "Switch to the Medicine tab"
+      },
+      {
+        "type": "action",
+        "description": "Fill a unique medicine name into the medicine name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a dose into the dose field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid time in the time field"
+      },
+      {
+        "type": "action",
+        "description": "Add the medicine reminder"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the newly added medicine reminder appears in the reminders list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Analyse pasted discharge text in a selected language and view all sections",
+    "description": "Verifies a logged-in patient can paste discharge text, select a language, run analysis, and see all four summary sections rendered.",
+    "category": "Discharge Explainer",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the shortcut to open the discharge explainer"
+      },
+      {
+        "type": "action",
+        "description": "Fill Discharge summary: patient admitted for chest pain; tests normal; start new medication; follow up in 1 week. into the discharge text area"
+      },
+      {
+        "type": "action",
+        "description": "Select Hindi as the language"
+      },
+      {
+        "type": "action",
+        "description": "Submit the analysis request"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the analysis results to finish loading"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the What Happened section is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Home Care, Warning Signs, and Follow Up sections are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Get symptom classification from a described symptom",
+    "description": "A logged-in patient can submit a symptom description and see a SAFE/MONITOR/URGENT classification with an explanation rendered.",
+    "category": "Symptom Checker",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to the symptom checker"
+      },
+      {
+        "type": "action",
+        "description": "Fill a realistic symptom description into the symptom text area"
+      },
+      {
+        "type": "action",
+        "description": "Submit the symptom for classification"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a symptom classification result (SAFE/MONITOR/URGENT) is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Add an appointment reminder and see it listed",
+    "description": "Patient can create an appointment reminder and it appears in the appointments list.",
+    "category": "Reminders",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation option to open reminders"
+      },
+      {
+        "type": "action",
+        "description": "Switch to the Appointment tab"
+      },
+      {
+        "type": "action",
+        "description": "Fill a doctor name into the doctor name field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid date in the date field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid time in the time field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a location into the location field"
+      },
+      {
+        "type": "action",
+        "description": "Add the appointment reminder"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the newly added appointment appears in the appointments list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Mark a reminder as done and see completion state persist after reload",
+    "description": "Patient can mark a reminder as completed and the completed state remains after reloading the page.",
+    "category": "Reminders",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation option to open reminders"
+      },
+      {
+        "type": "action",
+        "description": "Switch to the Medicine tab"
+      },
+      {
+        "type": "action",
+        "description": "Fill a unique medicine name into the medicine name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a dose into the dose field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid time in the time field"
+      },
+      {
+        "type": "action",
+        "description": "Add the medicine reminder"
+      },
+      {
+        "type": "action",
+        "description": "Toggle the newly created reminder as done"
+      },
+      {
+        "type": "action",
+        "description": "Reload the page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the reminder is shown as completed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Delete a reminder with confirmation and verify it is removed",
+    "description": "Patient can delete a reminder via the confirmation modal and it no longer appears in the list.",
+    "category": "Reminders",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation option to open reminders"
+      },
+      {
+        "type": "action",
+        "description": "Switch to the Medicine tab"
+      },
+      {
+        "type": "action",
+        "description": "Fill a unique medicine name into the medicine name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a dose into the dose field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid time in the time field"
+      },
+      {
+        "type": "action",
+        "description": "Add the medicine reminder"
+      },
+      {
+        "type": "action",
+        "description": "Initiate deletion for the newly created reminder"
+      },
+      {
+        "type": "action",
+        "description": "Confirm deletion in the modal"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the deleted reminder no longer appears in the reminders list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "Extract and save medications from pasted prescription text",
+    "description": "A logged-in patient can paste prescription text, extract and save it, and then see a medications list showing drug name, dosage, frequency, and duration.",
+    "category": "Prescription Tracker",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to the prescriptions feature"
+      },
+      {
+        "type": "action",
+        "description": "Fill the prescription text area with: \"Paracetamol 500mg 1 tablet twice daily for 5 days\""
+      },
+      {
+        "type": "action",
+        "description": "Submit the extract-and-save request"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a saved medications list is displayed with drug details (name, dosage, frequency, duration)"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC012",
+    "title": "Keep discharge analysis results visible when navigating away and back",
+    "description": "Verifies the discharge explainer preserves the current analysis result in the session when the user leaves the page and returns.",
+    "category": "Discharge Explainer",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the shortcut to open the discharge explainer"
+      },
+      {
+        "type": "action",
+        "description": "Fill Discharge summary: post-op instructions include wound care, activity limits, and follow up visit scheduling. into the discharge text area"
+      },
+      {
+        "type": "action",
+        "description": "Select Tamil as the language"
+      },
+      {
+        "type": "action",
+        "description": "Submit the analysis request"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the analysis results to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to go to the home dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Click the shortcut to open the discharge explainer"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify previously generated summary sections are still displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the discharge input content is still present"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC013",
+    "title": "Allow resubmitting a new symptom after receiving a result",
+    "description": "A logged-in patient can submit a symptom, receive a result, then submit a different symptom and see the result update accordingly.",
+    "category": "Symptom Checker",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to the symptom checker"
+      },
+      {
+        "type": "action",
+        "description": "Fill a realistic symptom description into the symptom text area"
+      },
+      {
+        "type": "action",
+        "description": "Submit the symptom for classification"
+      },
+      {
+        "type": "action",
+        "description": "Fill a different realistic symptom description into the symptom text area"
+      },
+      {
+        "type": "action",
+        "description": "Submit the symptom for classification"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a symptom classification result (SAFE/MONITOR/URGENT) is displayed for the latest submission"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC014",
+    "title": "Delete a saved prescription item after creating it",
+    "description": "A logged-in patient can create a saved prescription entry and then delete it with confirmation so it no longer appears in the list.",
+    "category": "Prescription Tracker",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to the prescriptions feature"
+      },
+      {
+        "type": "action",
+        "description": "Fill the prescription text area with: \"Cetirizine 10mg 1 tablet nightly for 7 days\""
+      },
+      {
+        "type": "action",
+        "description": "Submit the extract-and-save request"
+      },
+      {
+        "type": "action",
+        "description": "Initiate deletion for one saved prescription item"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the deletion"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the saved prescription item is no longer present in the prescriptions list"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC015",
+    "title": "Look up a drug and view patient-friendly information",
+    "description": "A logged-in patient can search for a drug name and see a patient-friendly summary including generic name, what it is for, how to take it, side effects, and what to avoid.",
+    "category": "Drug Lookup",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to the drug lookup feature"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"ibuprofen\" into the drug search field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the drug lookup"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify drug information sections are displayed (generic name, what it's for, how to take it, side effects, what to avoid)"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC016",
+    "title": "Prevent adding a medicine reminder when required fields are missing",
+    "description": "Patient cannot create a medicine reminder with missing required information and sees a validation indicator.",
+    "category": "Reminders",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation option to open reminders"
+      },
+      {
+        "type": "action",
+        "description": "Switch to the Medicine tab"
+      },
+      {
+        "type": "action",
+        "description": "Fill a unique medicine name into the medicine name field"
+      },
+      {
+        "type": "action",
+        "description": "Add the medicine reminder"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a form validation error is visible"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC017",
+    "title": "Prevent discharge analysis submission when no input is provided",
+    "description": "Verifies the discharge explainer blocks analysis when neither a PDF nor text is provided and shows an input validation error.",
+    "category": "Discharge Explainer",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the shortcut to open the discharge explainer"
+      },
+      {
+        "type": "action",
+        "description": "Select English as the language"
+      },
+      {
+        "type": "action",
+        "description": "Submit the analysis request"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an input validation error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no analysis results are displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC018",
+    "title": "Submit drug lookup using Enter key",
+    "description": "A logged-in patient can run a drug lookup by pressing Enter in the search input and see the drug summary rendered.",
+    "category": "Drug Lookup",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to the drug lookup feature"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"amoxicillin\" into the drug search field"
+      },
+      {
+        "type": "action",
+        "description": "Press Enter"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify drug information sections are displayed (generic name, what it's for, how to take it, side effects, what to avoid)"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC019",
+    "title": "Reject signup with duplicate email",
+    "description": "Verifies signup shows an email-in-use validation error when attempting to create an account with an existing email.",
+    "category": "User Signup",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signup"
+      },
+      {
+        "type": "action",
+        "description": "Fill Test into the first name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill 35 into the age field"
+      },
+      {
+        "type": "action",
+        "description": "Fill patient+dup@example.com into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill ValidPassword123! into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Fill Asthma into the condition/diagnosis field"
+      },
+      {
+        "type": "action",
+        "description": "Fill Dr Rao into the doctor name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill +14155550123 into the doctor WhatsApp number field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign up form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the user lands on the home dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to open the user profile"
+      },
+      {
+        "type": "action",
+        "description": "Sign out"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /signup"
+      },
+      {
+        "type": "action",
+        "description": "Fill Test into the first name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill 35 into the age field"
+      },
+      {
+        "type": "action",
+        "description": "Fill patient+dup@example.com into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill ValidPassword123! into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Fill Asthma into the condition/diagnosis field"
+      },
+      {
+        "type": "action",
+        "description": "Fill Dr Rao into the doctor name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill +14155550123 into the doctor WhatsApp number field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign up form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an email already exists validation error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the user remains on the signup page"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC020",
+    "title": "Reject signup with too-short password",
+    "description": "Verifies signup blocks submission when the password is shorter than the required minimum and shows a password validation error.",
+    "category": "User Signup",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signup"
+      },
+      {
+        "type": "action",
+        "description": "Fill Test into the first name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill 35 into the age field"
+      },
+      {
+        "type": "action",
+        "description": "Fill patient+shortpw@example.com into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill 123 into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Fill Hypertension into the condition/diagnosis field"
+      },
+      {
+        "type": "action",
+        "description": "Fill Dr Rao into the doctor name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill +14155550123 into the doctor WhatsApp number field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign up form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a password validation error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the user remains on the signup page"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC021",
+    "title": "Prevent symptom submission when description is empty",
+    "description": "A logged-in patient who submits the symptom form with an empty description sees a validation error and no result is shown.",
+    "category": "Symptom Checker",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_USER}} into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill {{LOGIN_PASSWORD}} into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to the symptom checker"
+      },
+      {
+        "type": "action",
+        "description": "Submit the symptom for classification"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a symptom description validation error is visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC022",
+    "title": "Block login with invalid credentials",
+    "description": "Verifies login fails with an invalid password and shows an invalid-credentials error without entering the app.",
+    "category": "User Login",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill invalid.user@example.com into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill WrongPassword123! into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an invalid credentials error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the user remains on the login page"
+      }
+    ],
+    "priority": "Low"
+  }
+]

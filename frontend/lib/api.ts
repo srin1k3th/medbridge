@@ -1,5 +1,5 @@
 import { supabase } from './supabase'
-const B = process.env.NEXT_PUBLIC_BACKEND_URL
+const B = process.env.NEXT_PUBLIC_API_URL
 async function h() {
   const { data } = await supabase.auth.getSession()
   return { 'Content-Type': 'application/json', Authorization: `Bearer ${data.session?.access_token}` }
@@ -133,7 +133,7 @@ ${text}`
 
 export async function parseVisitPrescription(text: string) {
   const { data } = await supabase.auth.getSession()
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/prescriptions/parse-visit`, {
+  const res = await fetch(`${B}/prescriptions/parse-visit`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

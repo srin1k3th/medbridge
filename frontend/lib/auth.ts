@@ -2,7 +2,8 @@ import { supabase } from './supabase'
 export async function signUp(email: string, password: string, p: {fname:string;age:string;diagnosis:string;doctorName:string;doctorNum:string}) {
   const { data, error } = await supabase.auth.signUp({ email, password })
   if (error) throw error
-  await supabase.from('profiles').insert({ id: data.user!.id, fname: p.fname, age: parseInt(p.age)||null, diagnosis: p.diagnosis, doctor_name: p.doctorName, doctor_whatsapp: p.doctorNum })
+  const { error: profileError } = await supabase.from('profiles').upsert({ id: data.user!.id, fname: p.fname, age: parseInt(p.age)||null, diagnosis: p.diagnosis, doctor_name: p.doctorName, doctor_whatsapp: p.doctorNum })
+  if (profileError) throw profileError
   return data
 }
 export async function signIn(email: string, password: string) {

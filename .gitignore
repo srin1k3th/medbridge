@@ -1,2 +1,7 @@
+node_modules/
+backend/venv/
+__pycache__/
+*.pyc
 .env
-backend/.env
+*.env.local
+.next/

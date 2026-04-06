@@ -1,0 +1,18 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "executionArgs": {
+    "projectName": "Medbridge-main",
+    "projectPath": "c:\\Users\\Sriniketh\\OneDrive\\Documents\\Medbridge-main",
+    "testIds": [],
+    "additionalInstruction": "Use the existing tests, but I have fixed the database by seeding example@gmail.com. Please execute the plan.",
+    "serverMode": "development",
+    "envs": {
+      "API_KEY": "sk-user-Okhh1FcJxU2t65TSknzMMfAQcOSU7TQfm5kwVyo1pmXS2K1kjmR6Ap-3-1A-HlugYFOFLTK9YcSjC6lfvegJe95pIDFnVIYQEGNmFUS2N6ccO35RVQz-FptLJ1lJLNJWu9A"
+    }
+  },
+  "serverPort": 60210,
+  "proxy": "http://e6c0d80d-c780-419f-b86b-3c49026ad315:7ZNbSzNN7CtqrEYYvw9HqPjPRVcMrNCm@tun.testsprite.com:8080"
+}
