@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import BottomNav from '@/components/BottomNav'
 import ScreenHeader from '@/components/ScreenHeader'
@@ -63,7 +63,7 @@ async function extractTextFromPdf(file: File): Promise<string> {
   return texts.join('\n\n')
 }
 
-export default function PrescriptionsPage() {
+function PrescriptionsPage() {
   const searchParams = useSearchParams()
   const tab = searchParams.get('tab')
   const [prescriptions, setPrescriptions] = useState<Prescription[]>([])
@@ -420,7 +420,7 @@ export default function PrescriptionsPage() {
             )}
 
             {!loading && !error && prescriptions.length === 0 && !showForm && (
-              <div style={{ textAlign: 'center', padding: '60px 0', display: 'flex', flexDirection: 'center', alignItems: 'center', gap: '12px' }}>
+              <div style={{ textAlign: 'center', padding: '60px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
                 <div style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.9rem', fontWeight: 700, color: 'rgba(255,255,255,0.6)' }}>No prescriptions yet</div>
                 <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.3)', maxWidth: '200px', lineHeight: 1.6 }}>
                   Upload prescription PDF to add prescription, or add one manually below.
@@ -983,5 +983,13 @@ export default function PrescriptionsPage() {
         </div>
       )}
     </div>
+  )
+}
+
+export default function PrescriptionsPageWrapper() {
+  return (
+    <Suspense fallback={null}>
+      <PrescriptionsPage />
+    </Suspense>
   )
 }
