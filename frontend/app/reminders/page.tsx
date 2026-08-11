@@ -142,7 +142,18 @@ export default function RemindersPage() {
                   {r.time_of_day?.slice(0, 5)}
                 </div>
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'rgba(255,255,255,0.92)' }}>{r.drug_name}</div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                    <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'rgba(255,255,255,0.92)' }}>{r.drug_name}</span>
+                    {r.auto_generated && (
+                      <span style={{
+                        fontSize: '0.55rem', padding: '2px 7px', borderRadius: '8px', fontWeight: 700,
+                        background: 'rgba(0,201,167,0.12)', color: '#00C9A7',
+                        border: '1px solid rgba(0,201,167,0.25)',
+                        fontFamily: 'JetBrains Mono, monospace', letterSpacing: '0.04em',
+                        textTransform: 'uppercase',
+                      }}>AUTO</span>
+                    )}
+                  </div>
                   <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.38)', marginTop: '2px' }}>{r.dose}</div>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>

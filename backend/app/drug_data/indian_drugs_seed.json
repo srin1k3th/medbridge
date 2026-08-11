@@ -1,0 +1,392 @@
+[
+  {
+    "drug_name": "Metformin",
+    "chunk_type": "indication",
+    "chunk_text": "Metformin (Glucophage) is used to treat type 2 diabetes. It lowers blood glucose by reducing liver glucose production and improving insulin sensitivity. First-line treatment for type 2 diabetes in India.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Metformin",
+    "chunk_type": "dosage",
+    "chunk_text": "Metformin is typically started at 500mg once or twice daily with meals, gradually increased to 1000-2000mg/day in divided doses. Always take with food to reduce stomach upset. Maximum dose: 2550mg/day.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Metformin",
+    "chunk_type": "warning",
+    "chunk_text": "Metformin should be stopped before contrast dye procedures (CT scans). It can cause lactic acidosis (rare but serious) in kidney disease. Monitor kidney function (eGFR) regularly. Stop if eGFR < 30.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Metformin",
+    "chunk_type": "interaction",
+    "chunk_text": "Metformin interactions: Alcohol increases lactic acidosis risk. Contrast dye (iodinated) requires temporary discontinuation. Cimetidine and trimethoprim can increase metformin levels. Furosemide may increase metformin exposure.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Amlodipine",
+    "chunk_type": "indication",
+    "chunk_text": "Amlodipine (Norvasc, Amcard) is a calcium channel blocker used to treat high blood pressure (hypertension) and chest pain (angina). It relaxes blood vessels so the heart does not have to work as hard.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Amlodipine",
+    "chunk_type": "dosage",
+    "chunk_text": "Amlodipine: usual dose 5mg once daily. May be increased to 10mg once daily if needed. Take at the same time each day, with or without food. Do not stop suddenly without consulting your doctor.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Amlodipine",
+    "chunk_type": "interaction",
+    "chunk_text": "Amlodipine interactions: Simvastatin dose should not exceed 20mg when taken with amlodipine (increased statin blood levels, rhabdomyolysis risk). Cyclosporine levels may increase. Grapefruit juice can increase amlodipine levels.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Atorvastatin",
+    "chunk_type": "indication",
+    "chunk_text": "Atorvastatin (Lipitor, Atorva) is a statin used to lower bad cholesterol (LDL) and triglycerides, and raise good cholesterol (HDL). Used to prevent heart attack and stroke in high-risk patients.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Atorvastatin",
+    "chunk_type": "warning",
+    "chunk_text": "Atorvastatin can rarely cause muscle damage (myopathy/rhabdomyolysis). Report unexplained muscle pain, weakness, or dark urine immediately. Stop if ALT/AST elevated >3x upper limit. Avoid in pregnancy.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Atorvastatin",
+    "chunk_type": "interaction",
+    "chunk_text": "Atorvastatin interactions: Do not take with clarithromycin, itraconazole, or HIV protease inhibitors (increased statin levels, severe muscle damage risk). Amlodipine: limit atorvastatin to 40mg. Avoid grapefruit juice. Warfarin: monitor INR when starting or stopping atorvastatin.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Ramipril",
+    "chunk_type": "indication",
+    "chunk_text": "Ramipril (Cardace, Hopace) is an ACE inhibitor used to treat high blood pressure, heart failure, and to protect the kidneys in diabetic nephropathy. Reduces risk of heart attack and stroke.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Ramipril",
+    "chunk_type": "warning",
+    "chunk_text": "Ramipril can cause a dry persistent cough (very common, especially in Indian patients — may need to switch to ARB). Can cause dangerous high potassium (hyperkalemia). Do NOT use in pregnancy. Can cause angioedema (tongue/throat swelling — stop immediately, medical emergency).",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Ramipril",
+    "chunk_type": "interaction",
+    "chunk_text": "Ramipril interactions: Do not combine with potassium supplements or potassium-sparing diuretics (hyperkalemia risk). NSAIDs (ibuprofen, diclofenac) reduce effectiveness and increase kidney damage risk. Lithium levels may rise. Aliskiren: avoid combination in diabetics.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Aspirin",
+    "chunk_type": "indication",
+    "chunk_text": "Low-dose Aspirin (75-150mg) is used for blood thinning to prevent heart attack and stroke in high-risk patients. Also used as a pain reliever and anti-inflammatory at higher doses (300-600mg).",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Aspirin",
+    "chunk_type": "interaction",
+    "chunk_text": "Aspirin interactions: Increases bleeding risk with warfarin, clopidogrel, heparin. NSAIDs (ibuprofen) taken together increases GI bleeding risk. Aspirin reduces effectiveness of ACE inhibitors. Methotrexate toxicity increased. Avoid alcohol (GI bleeding).",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Clopidogrel",
+    "chunk_type": "indication",
+    "chunk_text": "Clopidogrel (Plavix, Clopilet) is an antiplatelet drug used after heart attack, stroke, or stent placement to prevent blood clots. Often taken with aspirin (dual antiplatelet therapy).",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Clopidogrel",
+    "chunk_type": "warning",
+    "chunk_text": "Clopidogrel: Do not stop without consulting cardiologist (especially after stent — can cause life-threatening clot). Omeprazole reduces clopidogrel effectiveness significantly — use pantoprazole instead if stomach protection needed. Increases bleeding risk for all procedures.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Clopidogrel",
+    "chunk_type": "interaction",
+    "chunk_text": "Clopidogrel interactions: Omeprazole and esomeprazole significantly reduce clopidogrel efficacy (prefer pantoprazole/rabeprazole). Aspirin: combination increases bleeding but is intended for ACS/stent. Strong CYP2C19 inhibitors reduce effectiveness. Warfarin: triple therapy (warfarin+aspirin+clopidogrel) has very high bleed risk.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Pantoprazole",
+    "chunk_type": "indication",
+    "chunk_text": "Pantoprazole (Pan, Pantocid) is a proton pump inhibitor (PPI) that reduces stomach acid. Used for acid reflux (GERD), stomach ulcers, and to protect the stomach when taking NSAIDs or aspirin.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Pantoprazole",
+    "chunk_type": "interaction",
+    "chunk_text": "Pantoprazole interactions: Less CYP2C19 inhibition than omeprazole — preferred with clopidogrel. Reduces absorption of ketoconazole, itraconazole, iron, and vitamin B12 (long-term use). Methotrexate clearance may be reduced. Atazanavir absorption significantly reduced.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Warfarin",
+    "chunk_type": "indication",
+    "chunk_text": "Warfarin (Warf, Coumadin) is a blood thinner (anticoagulant) used to prevent and treat blood clots (DVT, PE), atrial fibrillation, and after heart valve replacement. Requires regular INR blood tests.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Warfarin",
+    "chunk_type": "warning",
+    "chunk_text": "Warfarin: Requires regular INR monitoring (target usually 2.0-3.0). MANY drug and food interactions — always check before adding any new medicine. Avoid large changes in green vegetables (vitamin K). Signs of over-anticoagulation: unusual bleeding, blood in urine/stool. Medical alert bracelet recommended.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Warfarin",
+    "chunk_type": "interaction",
+    "chunk_text": "Warfarin has CRITICAL interactions with many drugs: Antibiotics (especially metronidazole, fluconazole, ciprofloxacin) increase INR dramatically. NSAIDs increase bleeding risk. Aspirin and clopidogrel increase bleeding. Statins can alter INR. Amiodarone significantly increases warfarin effect. Vitamin K foods (spinach, broccoli) decrease effect. Always check INR when starting or stopping any medication.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Furosemide",
+    "chunk_type": "indication",
+    "chunk_text": "Furosemide (Lasix, Frusenex) is a loop diuretic (water pill) used to treat fluid retention (edema) in heart failure, kidney disease, and liver cirrhosis. Also used for high blood pressure.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Furosemide",
+    "chunk_type": "warning",
+    "chunk_text": "Furosemide causes frequent urination. Can cause low potassium (hypokalemia) — may need potassium supplement. Can cause dehydration — report dizziness, dry mouth, decreased urination. Monitor kidney function and electrolytes regularly. Take in the morning to avoid nighttime urination.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Furosemide",
+    "chunk_type": "interaction",
+    "chunk_text": "Furosemide interactions: ACE inhibitors (ramipril, enalapril) — first dose hypotension. Aminoglycoside antibiotics — increased ototoxicity (hearing damage). NSAIDs reduce diuretic effect and worsen kidney function. Digoxin — low potassium from furosemide increases digoxin toxicity risk. Lithium levels can rise dangerously.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Metoprolol",
+    "chunk_type": "indication",
+    "chunk_text": "Metoprolol (Betaloc, Metolar) is a beta-blocker used for high blood pressure, heart failure, angina, after heart attack, and fast heart rate (arrhythmia). Slows the heart rate and reduces blood pressure.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Metoprolol",
+    "chunk_type": "warning",
+    "chunk_text": "Metoprolol: Do NOT stop suddenly — can cause rebound angina and heart attack. Taper slowly under doctor supervision. May mask signs of low blood sugar in diabetics (except sweating). Can worsen asthma and COPD. Can cause fatigue, cold hands/feet, and sexual dysfunction.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Metoprolol",
+    "chunk_type": "interaction",
+    "chunk_text": "Metoprolol interactions: Verapamil/diltiazem combination can cause severe bradycardia and heart block. Clonidine: do not stop clonidine abruptly while on metoprolol. Antidiabetic drugs: masks hypoglycemia symptoms. Amiodarone increases metoprolol levels. MAOI antidepressants: avoid combination.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Insulin",
+    "chunk_type": "indication",
+    "chunk_text": "Insulin is used to control blood sugar in type 1 diabetes and type 2 diabetes not controlled by oral medications. Types include: rapid-acting (Novorapid, Humalog), long-acting (Lantus, Tresiba), and mixed (30/70 mixture).",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Insulin",
+    "chunk_type": "warning",
+    "chunk_text": "Insulin: Hypoglycemia (low blood sugar) is the main risk. Signs: shakiness, sweating, confusion, rapid heartbeat. Treat with sugar/glucose immediately. Store unused insulin in refrigerator (do not freeze). Do not inject into same site repeatedly — rotate sites. Sick days: do not stop insulin even if not eating.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Insulin",
+    "chunk_type": "interaction",
+    "chunk_text": "Insulin interactions: Beta-blockers mask hypoglycemia symptoms and prolong hypoglycemia. Corticosteroids raise blood sugar (may need more insulin). ACE inhibitors may enhance insulin sensitivity. Alcohol: unpredictable effect on blood sugar, risk of severe hypoglycemia. Salicylates (aspirin) enhance hypoglycemic effect.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Paracetamol",
+    "chunk_type": "indication",
+    "chunk_text": "Paracetamol (Acetaminophen, Crocin, Dolo, Calpol) is a pain reliever and fever reducer. Used for mild to moderate pain, headache, fever. Safe for most people including pregnant women when used correctly.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Paracetamol",
+    "chunk_type": "warning",
+    "chunk_text": "Paracetamol: Maximum dose 4g/day (4000mg/day) in adults. Do NOT exceed recommended dose — can cause serious liver damage (can be fatal). Avoid alcohol while taking paracetamol (liver damage risk). Check all other medicines — many contain paracetamol (cold remedies, combination pain relievers). Reduce dose in liver disease.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Paracetamol",
+    "chunk_type": "interaction",
+    "chunk_text": "Paracetamol interactions: Warfarin — paracetamol at high doses (>2g/day regularly) significantly increases INR; monitor closely. Alcohol: even moderate drinking with paracetamol increases liver damage risk. Isoniazid (TB drug): increases paracetamol toxicity. Carbamazepine, phenytoin, rifampicin increase paracetamol metabolism (reduced effect).",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Omeprazole",
+    "chunk_type": "indication",
+    "chunk_text": "Omeprazole (Omez, Prilosec) is a proton pump inhibitor (PPI) that reduces stomach acid. Used for GERD, peptic ulcer, Helicobacter pylori eradication, and Zollinger-Ellison syndrome. Very commonly prescribed in India.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Omeprazole",
+    "chunk_type": "interaction",
+    "chunk_text": "Omeprazole interactions: Clopidogrel — omeprazole significantly reduces clopidogrel effectiveness by inhibiting CYP2C19 activation. Use pantoprazole instead. Methotrexate clearance reduced. Reduces absorption of ketoconazole, itraconazole, erlotinib, iron, vitamin B12. Atazanavir levels dramatically reduced.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Azithromycin",
+    "chunk_type": "indication",
+    "chunk_text": "Azithromycin (Azithral, Zithromax) is a macrolide antibiotic used for respiratory infections, ear infections, skin infections, sexually transmitted infections (chlamydia), and typhoid prevention.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Azithromycin",
+    "chunk_type": "warning",
+    "chunk_text": "Azithromycin: Can prolong QT interval (heart rhythm problem) — avoid in patients with heart conditions or taking other QT-prolonging drugs. Can cause liver problems (jaundice reported). Not for long-term use. Complete the full course even if feeling better.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Azithromycin",
+    "chunk_type": "interaction",
+    "chunk_text": "Azithromycin interactions: QT-prolonging drugs (amiodarone, sotalol, haloperidol) — dangerous heart rhythm risk. Warfarin — azithromycin can increase INR significantly; monitor closely. Digoxin levels may increase. Colchicine toxicity in renal/hepatic impairment. Antacids reduce absorption — take 2 hours apart.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Amoxicillin",
+    "chunk_type": "indication",
+    "chunk_text": "Amoxicillin is a penicillin antibiotic used for bacterial infections: ear infections, throat infections, pneumonia, urinary tract infections, skin infections, and H. pylori (with other drugs). Very commonly used in India.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Amoxicillin",
+    "chunk_type": "interaction",
+    "chunk_text": "Amoxicillin interactions: Warfarin — may increase INR (monitor). Methotrexate excretion reduced — toxicity risk. Oral contraceptives — may reduce effectiveness (use backup method). Allopurinol combination increases risk of skin rash. Probenecid increases amoxicillin blood levels.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Losartan",
+    "chunk_type": "indication",
+    "chunk_text": "Losartan (Losar, Cozaar) is an angiotensin receptor blocker (ARB) used for high blood pressure and to protect kidneys in diabetic nephropathy. Good alternative to ACE inhibitors for patients who get cough from ramipril.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Losartan",
+    "chunk_type": "interaction",
+    "chunk_text": "Losartan interactions: Potassium supplements and potassium-sparing diuretics (spironolactone) — hyperkalemia risk. NSAIDs reduce antihypertensive effect and increase kidney damage risk. ACE inhibitors combined — avoid dual blockade (increased adverse effects). Rifampicin reduces losartan levels.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Dexamethasone",
+    "chunk_type": "indication",
+    "chunk_text": "Dexamethasone is a corticosteroid used for inflammation, allergic reactions, autoimmune conditions, brain edema, COVID-19 (severe), cancer-related symptoms, and to prevent nausea after chemotherapy.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Dexamethasone",
+    "chunk_type": "warning",
+    "chunk_text": "Dexamethasone: Do not stop suddenly after long-term use (adrenal crisis risk — taper slowly). Raises blood sugar — diabetics need more frequent monitoring. Reduces immune function — avoid exposure to infections. Can cause stomach ulcers — take with food, consider PPI. Moon face, weight gain, and mood changes are common with long-term use.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Dexamethasone",
+    "chunk_type": "interaction",
+    "chunk_text": "Dexamethasone interactions: NSAIDs — increased GI ulcer risk. Diabetes medications — blood sugar rises, may need dose adjustment. Warfarin — unpredictable INR changes. Rifampicin, phenytoin reduce dexamethasone effectiveness. Cyclosporine — mutual interaction. Fluoroquinolone antibiotics — increased tendon rupture risk.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Spironolactone",
+    "chunk_type": "indication",
+    "chunk_text": "Spironolactone (Aldactone, Spiromide) is a potassium-sparing diuretic used for heart failure, resistant hypertension, cirrhosis with ascites, primary hyperaldosteronism. Also used for acne and hirsutism in women.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Spironolactone",
+    "chunk_type": "interaction",
+    "chunk_text": "Spironolactone interactions: ACE inhibitors and ARBs — serious hyperkalemia risk (high potassium). Potassium supplements — avoid unless closely monitored. NSAIDs reduce effectiveness. Digoxin levels may increase. Lithium toxicity risk increased. Warfarin effect may be altered.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Digoxin",
+    "chunk_type": "indication",
+    "chunk_text": "Digoxin (Lanoxin, Digicor) is used to treat heart failure and atrial fibrillation. It slows the heart rate and strengthens heart contractions. Has a narrow therapeutic window — requires blood level monitoring.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Digoxin",
+    "chunk_type": "warning",
+    "chunk_text": "Digoxin toxicity signs: nausea, vomiting, vision changes (yellow-green halos), slow/irregular pulse. Low potassium (from diuretics) dramatically increases toxicity risk. Regular digoxin blood level and electrolyte checks required. Elderly patients are especially sensitive — lower doses needed.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Digoxin",
+    "chunk_type": "interaction",
+    "chunk_text": "Digoxin critical interactions: Amiodarone doubles digoxin levels (halve digoxin dose). Verapamil, diltiazem, quinidine increase digoxin levels. Furosemide/thiazides cause hypokalemia — increases digoxin toxicity. Calcium channel blockers, macrolide antibiotics increase levels. Spironolactone can falsely elevate digoxin measurements.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Levothyroxine",
+    "chunk_type": "indication",
+    "chunk_text": "Levothyroxine (Thyronorm, Eltroxin) is used to treat underactive thyroid (hypothyroidism). It replaces or supplements thyroid hormone. Must be taken lifelong in most cases. Very common in India, especially in women.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Levothyroxine",
+    "chunk_type": "dosage",
+    "chunk_text": "Levothyroxine: Take on empty stomach, 30-60 minutes before breakfast. Consistency is crucial — take at the same time daily. Do not take with calcium, iron, or antacids (reduce absorption). TSH monitoring every 6-12 months once stable.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Levothyroxine",
+    "chunk_type": "interaction",
+    "chunk_text": "Levothyroxine interactions: Calcium, iron, magnesium, antacids — reduce absorption by up to 40% (separate by 4 hours). Warfarin — levothyroxine increases warfarin effect (monitor INR). Diabetes medications — may need dose adjustment. Carbamazepine, phenytoin, rifampicin increase metabolism. Cholestyramine reduces absorption.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Ciprofloxacin",
+    "chunk_type": "indication",
+    "chunk_text": "Ciprofloxacin (Cifran, Ciplox) is a fluoroquinolone antibiotic used for urinary tract infections, respiratory infections, gastrointestinal infections (typhoid), and bone infections. Do not use for routine throat/cold infections.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Ciprofloxacin",
+    "chunk_type": "warning",
+    "chunk_text": "Ciprofloxacin: Can cause tendon rupture (especially Achilles tendon) — stop if tendon pain, rest immediately. Avoid in children and pregnant women. Can cause QT prolongation. Lowers seizure threshold — use cautiously in epilepsy. Avoid excessive sun exposure (photosensitivity).",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Ciprofloxacin",
+    "chunk_type": "interaction",
+    "chunk_text": "Ciprofloxacin interactions: Antacids, iron, calcium reduce absorption dramatically (take 2 hours apart). Warfarin — significantly increases INR (monitor closely). NSAIDs — increased seizure risk. Theophylline levels increase (toxicity risk). Methotrexate excretion reduced. QT-prolonging drugs (amiodarone) — dangerous combination.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Glimepiride",
+    "chunk_type": "indication",
+    "chunk_text": "Glimepiride (Amaryl, Glimestar) is a sulfonylurea used to treat type 2 diabetes. It stimulates the pancreas to produce more insulin. Often combined with metformin.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Glimepiride",
+    "chunk_type": "warning",
+    "chunk_text": "Glimepiride: Main risk is hypoglycemia (low blood sugar), especially if meal is delayed or skipped. Always eat after taking. Alcohol dramatically increases hypoglycemia risk. Elderly patients are at higher risk. Cross-allergy with sulfa antibiotics possible.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Telmisartan",
+    "chunk_type": "indication",
+    "chunk_text": "Telmisartan (Telma, Micardis) is an ARB used for hypertension and cardiovascular risk reduction. Has the longest half-life among ARBs, once-daily dosing. Does not cause cough (unlike ACE inhibitors).",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Telmisartan",
+    "chunk_type": "interaction",
+    "chunk_text": "Telmisartan interactions: Digoxin levels may increase significantly — monitor digoxin. ACE inhibitors — avoid dual RAAS blockade. Potassium-sparing diuretics and potassium supplements — hyperkalemia risk. NSAIDs reduce antihypertensive effect. Ramipril combination is not recommended.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Amiodarone",
+    "chunk_type": "indication",
+    "chunk_text": "Amiodarone (Cordarone, Amiodar) is an antiarrhythmic used for serious heart rhythm problems including atrial fibrillation, ventricular tachycardia, and ventricular fibrillation. Used when other antiarrhythmics have failed.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Amiodarone",
+    "chunk_type": "warning",
+    "chunk_text": "Amiodarone has many serious side effects: thyroid problems (hypo or hyperthyroidism), lung toxicity (pulmonary fibrosis — cough, shortness of breath), liver toxicity, corneal deposits, skin photosensitivity and blue-grey discoloration. Requires regular monitoring of thyroid, liver, lungs. Avoid sun exposure.",
+    "source": "OpenFDA_curated"
+  },
+  {
+    "drug_name": "Amiodarone",
+    "chunk_type": "interaction",
+    "chunk_text": "Amiodarone has CRITICAL interactions: Warfarin — doubles warfarin effect (halve warfarin dose, monitor INR weekly initially). Digoxin — doubles digoxin levels (halve digoxin dose). Statins — increased myopathy risk (simvastatin max 20mg). Clopidogrel — reduces antiplatelet effect. Beta-blockers and calcium channel blockers — bradycardia risk. QT-prolonging drugs — dangerous.",
+    "source": "OpenFDA_curated"
+  }
+]
