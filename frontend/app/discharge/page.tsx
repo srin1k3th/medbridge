@@ -83,7 +83,10 @@ async function* streamAnalyse(text: string, language: string, token: string) {
         const parsed = JSON.parse(payload)
         if (parsed.token) yield parsed.token
         if (parsed.error) throw new Error(parsed.error)
-      } catch { }
+      } catch (e) {
+        if (e instanceof Error) throw e  // re-throw backend errors
+        // ignore JSON parse errors on partial chunks
+      }
     }
   }
 }
@@ -99,6 +102,7 @@ export default function DischargePage() {
   const [ocrRunning, setOcrRunning] = useState(false)
   const [ocrMethod, setOcrMethod] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
+  const [analyseError, setAnalyseError] = useState<string | null>(null)
   const [streamedText, setStreamedText] = useState('')
   const [result, setResult] = useState<Record<string, string> | null>(null)
   const [extracting, setExtracting] = useState(false)
@@ -155,7 +159,7 @@ export default function DischargePage() {
   // ── Streaming analysis
   async function analyse() {
     if (!text.trim()) return
-    setLoading(true); setResult(null); setStreamedText(''); setExtracted(null)
+    setLoading(true); setResult(null); setStreamedText(''); setExtracted(null); setAnalyseError(null)
     abortRef.current = false
 
     try {
@@ -182,6 +186,7 @@ export default function DischargePage() {
       }
     } catch (err: any) {
       console.error('Analysis error:', err)
+      setAnalyseError(err.message || 'Analysis failed. Please try again.')
     }
     setLoading(false)
   }
@@ -315,6 +320,19 @@ export default function DischargePage() {
               )}
               <span style={{ color: 'rgba(0,201,167,0.7)', fontSize: '0.7rem' }}>Check Reminders to adjust times.</span>
             </div>
+          </div>
+        )}
+
+        {/* Analysis error banner */}
+        {analyseError && (
+          <div className="fade-in" style={{
+            background: 'rgba(255,90,95,0.08)', border: '1px solid rgba(255,90,95,0.3)',
+            borderRadius: '12px', padding: '12px 16px',
+            fontSize: '0.78rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.6,
+            display: 'flex', alignItems: 'center', gap: '10px',
+          }}>
+            <span style={{ fontSize: '1.4rem' }}>⚠️</span>
+            <div><strong>Analysis failed:</strong> {analyseError}</div>
           </div>
         )}
 

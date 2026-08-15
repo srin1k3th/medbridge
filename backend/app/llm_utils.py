@@ -27,7 +27,7 @@ T = TypeVar("T", bound=BaseModel)
 # ---------------------------------------------------------------------------
 
 MAIN_MODEL = "llama-3.3-70b-versatile"
-GUARD_MODEL = "llama-3.1-8b-instant"   # fast + cheap for guardrail screening
+GUARD_MODEL = "gemma2-9b-it"           # fast + cheap for guardrail screening (llama-3.1-8b-instant decommissioned)
 MAX_RETRIES = 3
 
 
